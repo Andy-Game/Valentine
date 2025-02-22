@@ -17,21 +17,18 @@
 
         /* 中奖消息样式 */
         #win-messages {
-            position: fixed;
-            top: 20%;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.9);
-            color: #FFD700;
-            padding: 15px 30px;
-            border-radius: 15px;
-            text-align: center;
-            z-index: 1000;
-            display: none;
-            font-size: 18px;
-            box-shadow: 0 0 20px rgba(255,215,0,0.5);
-            border: 2px solid #FFD700;
-            animation: float 15s ease-in-out infinite;
+       position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    z-index: 1000;
+    display: none; /* 默认隐藏 */
         }
 
         /* 浮动动画 */
@@ -410,7 +407,7 @@
             messageContainer.style.display = 'block';
             setTimeout(() => {
                 messageContainer.style.display = 'none';
-            }, Math.min(10000, messages.length * 5000));
+            }, Math.min(10000, messages.length * 8000));
         }
 
         // 更新排行榜
