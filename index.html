@@ -80,7 +80,7 @@
         /* 老虎机容器 */
         .slot-machine {
             display: grid;
-            grid-template-columns: repeat(3, 80px);
+            grid-template-columns: repeat(3, 120px);
             gap: 10px;
             padding: 5px;
             background: linear-gradient(to bottom, #FF1493, #FF69B4);
@@ -92,8 +92,8 @@
 
         /* 老虎机格子 */
         .reel {
-            width: 80px;
-            height: 80px;
+            width: 120px;
+            height: 120px;
             border-radius: 8px;
             display: flex;
             align-items: center;
@@ -129,13 +129,45 @@
             transform: scale(1.05);
         }
         /* 中奖倍率表 */
+
         .info {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 10px;
-            border-radius: 10px;
-            text-align: left;
-            border: 1px solid #FFD700;
-            box-shadow: 0 0 10px rgba(255,215,0,0.5);
+   .info {
+       position: absolute;
+    left: 50%;
+    top: 75%; /* 根据需要调整 */
+    transform: translate(-50%, -50%);
+    background: #222; /* 深色背景 */
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    border: 3px solid #FFD700; /* 金色边框 */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.7); /* 金色光晕效果 */
+    width: 280px; /* 适当调整大小 */
+    font-size: 16px;
+    font-weight: bold;
+}
+.info th, .info td {
+    border: 2px solid #FFD700; /* 金色边框 */
+    padding: 5px;
+    text-align: center;
+}
+.info table {
+    width: 100%;
+    border-collapse: collapse; /* 让线条贴合 */
+}
+/* 添加表格样式 */
+.info table {
+    width: 100%;
+    border-collapse: collapse; /* 让线条贴合 */
+}
+
+.info th, .info td {
+    border: 2px solid #FFD700; /* 金色边框 */
+    padding: 5px;
+    text-align: center;
+}
+
         }
         /* 排行榜样式 */
         .leaderboard {
@@ -199,20 +231,7 @@
             <div class="reel" id="r3c3">😍</div>
         </div>
 
-        <!-- 中奖倍率表 -->
-        <div class="info">
-            <h3>🎰 中奖倍率表：</h3>
-            🍫 巧克力	×11	<br>
-            🌹 玫瑰	×22	<br>
-            🚗 车子	×33	<br>
-            ✈️ 飞机 	×55	<br>
-            🏠 房子 	×66	<br>
-            🛥️ 游艇 	×77	<br>
-            🚁 直升机 	×88	<br>
-            💎 钻石 	×99	<br>
-            💵 钞票 	×100	<br>
-            😍 爱神 	×1000	<br>
-        </div>
+
     </div>
 
     <div class="bet-buttons">
@@ -230,7 +249,20 @@
         <h3>🏆 富豪排行榜：</h3>
         <ul id="leaderboard-list"></ul>
     </div>
-
+        <!-- 中奖倍率表 -->
+        <div class="info">
+            <h3>🎰 中奖倍率表：</h3>
+            🍫 巧克力	×11	<br>
+            🌹 玫瑰	×22	<br>
+            🚗 车子	×33	<br>
+            ✈️ 飞机 	×55	<br>
+            🏠 房子 	×66	<br>
+            🛥️ 游艇 	×77	<br>
+            🚁 直升机 	×88	<br>
+            💎 钻石 	×99	<br>
+            💵 钞票 	×100	<br>
+            😍 爱神 	×1000	<br>
+        </div>
     <h3>🎵 背景音乐：</h3>
     <audio id="background-music" src="https://www.kumeiwp.com/wj/10700/2022/01/06/1ebe08a89277f4edb71d749f8095858d.mp3" autoplay loop></audio>
     <h3>🎵 选择你的音乐：</h3>
