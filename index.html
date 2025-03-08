@@ -514,17 +514,18 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 1); /* 添加阴影效果 */
 
 <style>
     .donation {
-        position: absolute;
-        top: 100px;  /* 将打赏放到选择你的音乐下面，根据需要调整 */
-        left: 20px;
-        font-size: 14px;  /* 字体大小调整 */
+        position: fixed;   /* 使用 fixed 固定位置 */
+        top: 0;            /* 定位到页面的顶部 */
+        left: 0;           /* 定位到页面的左边 */
+        font-size: 14px;   /* 字体大小调整 */
         font-weight: bold;
-        background: #1E90FF;  /* 蓝色背景，类似创作者的背景 */
+        background: #FFD700;  /* 太阳金黄色背景 */
         color: #fff;
         padding: 10px 20px;
         border-radius: 10px;
         text-align: center;
         box-shadow: 0 0 10px rgba(30, 144, 255, 0.8);
+        z-index: 1000;  /* 保证按钮位于其他元素之上 */
     }
     .donation a {
         text-decoration: none;
@@ -534,6 +535,7 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 1); /* 添加阴影效果 */
         background: #4682B4;  /* 更深的蓝色背景 */
         box-shadow: 0 0 15px rgba(70, 130, 180, 1);
     }
+
 </style>
 </body>
 </html>
